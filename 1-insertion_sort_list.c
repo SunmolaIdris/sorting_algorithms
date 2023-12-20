@@ -1,7 +1,7 @@
 #include "sort.h"
 void swap_nodes(listint_t **a, listint_t **b);
 /**
- * insertion_sort_list - sort list in ascending order
+ * insertion_sort_list - sorts list in ascending order
  * @list: head of list to sort
  */
 void insertion_sort_list(listint_t **list)
@@ -20,7 +20,7 @@ void insertion_sort_list(listint_t **list)
 			/* if values are not ascending */
 			while (prev && current->n < prev->n)
 			{
-				swap_nodes(&prev, &curr);
+				swap_nodes(&prev, &current);
 				if (prev == *list) /* if current now list head */
 					*list = current;
 				print_list(*list);
